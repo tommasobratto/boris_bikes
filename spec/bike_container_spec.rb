@@ -61,4 +61,3 @@ describe BikeContainer do
 end
 
 
-rspec shared examples
