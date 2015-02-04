@@ -6,7 +6,7 @@ describe BikeContainer do
 
 	let(:bike)   		{ double :bike, break!: false, broken?: false }
 	let(:broken_bike)   { double :bike, break!: true,  broken?: true  }
-	let(:holder) 		{ ContainerHolder.new                       }
+	let(:holder) 		{ ContainerHolder.new                         }
 
 	def fill_holder(holder)
 		holder.capacity.times {holder.dock(bike)}

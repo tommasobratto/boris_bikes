@@ -1,17 +1,15 @@
+require_relative 'bike_container'
+
 class Van 
-	DEFAULT_CAPACITY = 4
+
+	include BikeContainer
 	
 	def initialize(options  = {})
-		@capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
-		@bikes = []
+		self.capacity = options.fetch(:capacity, capacity)
 	end
 
-	def load(bike)
-		@bikes << bike
-	end
-
-	def bikes_loaded
-		@bikes.count
-	end
-
+   def capacity
+   	capacity = 6
+   end
+   
 end
