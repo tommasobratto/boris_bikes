@@ -49,7 +49,7 @@ describe DockingStation do
 
  	it "should not release a bike that is not there" do
  		empty_station station
- 		expect{ station.release(bike) }.to raise_error(RuntimeError, 'No bikes available')
+ 		expect{ station.release(bike) }.to raise_error( 'No bikes available')
  	end
 
  	it "should not release a bike if there's no argument passed" do
