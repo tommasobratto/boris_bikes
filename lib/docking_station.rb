@@ -1,9 +1,11 @@
+require_relative 'bike_container'
+
 class DockingStation
-	DEFAULT_CAPACITY = 10
+
+	include BikeContainer
 
 	def initialize(options = {})
-		@capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
-		@bikes =[]
+		self.capacity = options.fetch(:capacity, capacity)
 	end
 
 	def bike_count
