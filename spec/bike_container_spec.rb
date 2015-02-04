@@ -6,10 +6,10 @@ describe BikeContainer do
 
 	let(:bike)   		{ double :bike, break!: false, broken?: false }
 	let(:broken_bike)   { double :bike, break!: true,  broken?: true  }
-	let(:holder) 		{ ContainerHolder.new 			              }
+	let(:holder) 		{ ContainerHolder.new                       }
 
 	def fill_holder(holder)
-		10.times {holder.dock(bike)}
+		holder.capacity.times {holder.dock(bike)}
 	end
 
 	def empty_holder(holder)
@@ -59,3 +59,6 @@ describe BikeContainer do
  		expect{ holder.release(nil) }.to raise_error( 'invalid release request' )
  	end
 end
+
+
+rspec shared examples
