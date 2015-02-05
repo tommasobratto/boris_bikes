@@ -1,19 +1,16 @@
 require_relative 'bike_container'
 
-class DockingStation
+class Garage
 
 	include BikeContainer
-
-	def initialize(options = {})
-		self.capacity = options.fetch(:capacity, capacity)
-	end
-
-	def do_what_stations_do(bike)
+	
+	def do_what_garages_do(bike)
 		dock(bike)
 		bikes.each do |bike|
 			if bike.broken? == true
+				bike.fix!
 				release(bike)
-			else 
+			else
 			end
 		end
 	end
