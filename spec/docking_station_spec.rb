@@ -10,7 +10,7 @@ describe DockingStation do
 
   it 'should check for broken bikes and release them' do
   	broken_bike.broken?
-		station.do_what_stations_do(broken_bike)  
+		station.release_broken_bikes(broken_bike)  
 		expect(station.bike_count).to eq(0)
 	end
 

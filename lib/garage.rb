@@ -4,7 +4,7 @@ class Garage
 
 	include BikeContainer
 	
-	def do_what_garages_do(bike)
+	def release_fixed_bikes(bike)
 		dock(bike)
 		bikes.each do |bike|
 			if bike.broken? == true

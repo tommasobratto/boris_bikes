@@ -8,7 +8,7 @@ class DockingStation
 		self.capacity = options.fetch(:capacity, capacity)
 	end
 
-	def do_what_stations_do(bike)
+	def release_broken_bikes(bike)
 		dock(bike)
 		bikes.each do |bike|
 			release(bike) if bike.broken? == true

@@ -7,7 +7,7 @@ describe Garage do
 
 	it 'should take broken bikes and release fixed bikes' do
 		broken_bike.broken?
-		garage.do_what_garages_do(broken_bike)
+		garage.release_fixed_bikes(broken_bike)
 		expect(garage.bike_count).to eq(0)
 	end
 	
