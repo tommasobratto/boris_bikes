@@ -8,7 +8,7 @@ class Garage
 		dock(bike)
 		bikes.each do |bike|
 			if bike.broken? == true
-				bike.fixz!
+				bike.fix!
 				release(bike)
 			else
 			end
