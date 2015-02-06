@@ -11,10 +11,7 @@ class DockingStation
 	def do_what_stations_do(bike)
 		dock(bike)
 		bikes.each do |bike|
-			if bike.broken? == true
-				release(bike)
-			else 
-			end
+			release(bike) if bike.broken? == true
 		end
 	end
 

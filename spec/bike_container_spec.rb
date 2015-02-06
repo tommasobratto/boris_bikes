@@ -4,9 +4,9 @@ class ContainerHolder; include BikeContainer; end
 
 describe BikeContainer do
 
-	let(:bike)   		{ double :bike, break!: false, broken?: false }
+	let(:bike)   		    { double :bike, break!: false, broken?: false }
 	let(:broken_bike)   { double :bike, break!: true,  broken?: true  }
-	let(:holder) 		{ ContainerHolder.new                         }
+	let(:holder) 		    { ContainerHolder.new                         }
 
 	def fill_holder(holder)
 		holder.capacity.times {holder.dock(bike)}
@@ -58,6 +58,7 @@ describe BikeContainer do
  	it "should not release a bike if there's no argument passed" do 
  		expect{ holder.release(nil) }.to raise_error( 'invalid release request' )
  	end
+ 	
 end
 
 
